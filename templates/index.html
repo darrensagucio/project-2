@@ -18,7 +18,8 @@
 
 		<!-- css file -->
 		<link rel="stylesheet" type="text/css" href="[ENTER CSS FILE HERE]">
-
+		<!-- jinja run css file -->
+		<link rel="stylesheet" type= "text/css" href="{{ url_for('static', filename= 'css/style.css')}}">
 		</head>
 		<body>
 
@@ -30,6 +31,6 @@
 
 		<!-- js files -->
 		<script type="text/javascript" src="[ENTER JAVASCRIPT FILE HERE]"></script>
-
+		
 	</body>
 </html>
