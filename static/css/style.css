@@ -14,11 +14,14 @@ body {
 h1 {
   font-family: Georgia, 'Times New Roman', Times, serif;
   color:#C0C0C0;
+  letter-spacing: -2px;
+  line-height: 2.5px;
 }
 
 h2 {
   font-family: Georgia, 'Times New Roman', Times, serif;
   color: 	#a9a9a9;
+  letter-spacing: -2px;
 }
 
 .jumbotron {
