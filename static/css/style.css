@@ -1,6 +1,30 @@
 body {
-    background-color: black;
+  background-color: black;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
 }
+
+.container-fluid {
+  border: black;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: #C0C0C0;
+}
+
+h1 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color:#C0C0C0;
+}
+
+h2 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: 	#a9a9a9;
+}
+
+.jumbotron {
+  background-color: black;
+}
+
 
 .header {
     color: white;
@@ -39,6 +63,5 @@ body {
   .footer{
       font-family: Georgia, 'Times New Roman', Times, serif;
       text-align: center;
-      margin-top: 200px;
       opacity: 0.5;
   }
