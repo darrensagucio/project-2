@@ -1,6 +1,37 @@
 body {
+<<<<<<< HEAD
     background-color: white;
+=======
+  background-color: black;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+>>>>>>> 7c96e473ef34467dc4290b69912573c3f3c0a897
 }
+
+.container-fluid {
+  border: black;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: #C0C0C0;
+}
+
+h1 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color:#C0C0C0;
+  letter-spacing: -2px;
+  line-height: 2.5px;
+}
+
+h2 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: 	#a9a9a9;
+  letter-spacing: -2px;
+}
+
+.jumbotron {
+  background-color: black;
+}
+
 
 .header {
     color: white;
@@ -39,6 +70,5 @@ body {
   .footer{
       font-family: Georgia, 'Times New Roman', Times, serif;
       text-align: center;
-      margin-top: 200px;
       opacity: 0.5;
   }
