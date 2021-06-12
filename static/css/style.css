@@ -1,12 +1,8 @@
 body {
-<<<<<<< HEAD
-    background-color: white;
-=======
-  background-color: black;
+  background-color: white;
   margin: 0;
   padding: 0;
   font-family: sans-serif;
->>>>>>> 7c96e473ef34467dc4290b69912573c3f3c0a897
 }
 
 .container-fluid {
@@ -66,9 +62,40 @@ h2 {
     color:white;
   }
 
- 
   .footer{
       font-family: Georgia, 'Times New Roman', Times, serif;
       text-align: center;
       opacity: 0.5;
+  }
+
+  /* LEAFLET */
+  
+  .legend {
+    padding: 6px 8px;
+    font: 12px Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #555;
+    background: #fff;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .legend i {
+    display: inline-block;
+    width: 30px;
+    height: 22px;
+  }
+  
+  .info {
+    padding: 6px 8px;
+    background: white;
+    background: rgba(255,255,255,0.8);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 5px;
+  }
+  .info h4 {
+    margin: 0 0 5px;
+    font: 20px Helvetica;
+    color: #777;
   }

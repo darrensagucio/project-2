@@ -13,6 +13,14 @@
   		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 		<!-- favicon.ico error corrected -->
 		<link rel="shortcut icon" href="#">
+
+		<!-- d3 js -->
+		<script src="https://d3js.org/d3.v5.min.js"></script>
+
+		 <!-- leaflet script -->
+		 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css"
+		 integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+		 crossorigin=""/>
 		
 		<!-- css file -->
 		<link rel="stylesheet" type="text/css" href="../static/css/style.css">
@@ -53,9 +61,18 @@
 			</div>
 			</div>
 		  </div>
-
-		<!-- d3 js -->
-		<script src="https://d3js.org/d3.v5.min.js"></script>
+		
+		  <!-- LEAFLET-->
+		  <div id="map" style="width: 800px; height: 400px">
+			<script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"
+			integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
+			crossorigin=""></script>
+		   
+			<!-- API key -->
+			<script type=text/javascript src="{{url_for('static', filename='js/config.js')}}"></script>
+			<!-- JS  -->
+			<script type=text/javascript src="{{url_for('static', filename='js/map.js')}}"></script>
+		  </div>
 
 		<!-- js files -->
 		<!-- <script type="text/javascript" src="[ENTER JAVASCRIPT FILE HERE]"></script> -->
