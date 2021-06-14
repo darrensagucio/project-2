@@ -1,35 +1,51 @@
 // git file for interactive d3 graph
 
-var svg = d3.select('.graph').append('svg')
+var drawgraph = function(){
+    
+    var svg = d3.select('.graph').append('svg')
 
-svg.attr("width", "700px").attr("height","800px")
+    var w = "500"
+    var h = "500"
 
-var line = 0
-var xpos = 0
-var ypos = 0
+    svg.attr("width", w).attr("height",h).attr('background-color','#264653')
+
+    var cols = 10
+    var rows = 10
+
+    var placemarkers = d3.range(cols*rows)
+
+    var yscale = d3.scaleBand()
+                .range([0,250])
+                .domain(d3.range(rows))
+
+    var xscale = d3.scaleBand()
+                .range([0,250])
+                .domain(d3.range(cols))
+
+    var container = svg.append("g")
+                .attr("transform","translate(120,120)")
 
 
-xpos = i%linelength
-ypos = i/linelength - 1
+    d3.xml("../images/Stickman.svg").then(data => {
+    var icons = svg.append("defs")
+            .append("g")
+            .attr("id","hungerIcon")
+    })
 
-j = 0
-x = 0
+    var percentNumber = 85;
 
-for(i = 0; i < 808; i++) {
-    console.log("j = ", j)
-    x = i * 30
-    svg.append('image')
-        .attr('xlink:href', "../images/Stickman.svg")
-        .attr('height', 50)
-        .attr('width', 19)
-        .attr('class','hungry')
-        .attr("x", xpos)
-        .attr("y", ypos)
+    var not_hungry = "#4D908E";
+    var hungry = "#adf7b6";
 
-    if(((i+1) * 30) > (700 * (j+1))){
-        console.log("greater than 700")
-        x = i * 30
-        j = j+1
-    }
+    container.selectAll("use")
+        .data(placemarkers)
+        .enter().append("use")
+        .attr("id", function(d) {return "id"+d})
+        .attr("id", function(d){ return "id"+d})
+        .attr("x", function(d){ return xscale(d%cols)})
+        .attr("y", function(d){ return yscale(Math.floor(d/cols))})
+        .attr('fill', function(d){ return d < percentNumber ? not_hungry : hungry})
+        .style('stroke', 'black')
 }
-console.log(j)
+
+drawgraph();
