@@ -1,0 +1,4 @@
+{
+    "states":["California","Texas","Florida","Maine"],
+    "hunger":[{"California":90, "Texas":80, "Florida":70, "Maine":60}]
+}

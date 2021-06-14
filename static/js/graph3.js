@@ -1,7 +1,24 @@
 var drawGraph = function(){
 
+	var dropMenu = d3.select("#selDataset")
+
+    d3.json("../static/data/dummy_data.json").then((data) => {
+        console.log(data)
+		var locations = d3.values(data.states)
+		console.log(locations)
+        locations.forEach((place) => {
+			console.log(place)
+            dropMenu
+            .append("option")
+            .text(place)
+            .property("value", place);
+        });
+		console.log()
+	})
+
+
 	//number of icons to color in to visualize percent
-	var percentNumber = 92;
+	var percentNumber = 100;
 
 	//variables for the font family, and some colors
 	var fontFamily = "helvetica";
@@ -69,19 +86,35 @@ var drawGraph = function(){
 
     d3.selectAll("#hunger_icon")
         .attr("transform","scale(0.05)")
-        .attr("stroke","red")
-    
-    var test = container.append('text').text("this is information about hungry people")
-                    .attr('id','text_info')
-                    .attr("font-size","15px")
-                    .attr('x',50)
-                    .attr('y',50)
-                    .style('fill','white')
 
 
-        
 
 
+    //this was a text box test while experimenting with colors of people
+    // var test = container.append('text').text("this is information about hungry people")
+    //                 .attr('id','text_info')
+    //                 .attr("font-size","15px")
+    //                 .attr('x',50)
+    //                 .attr('y',50)
+    //                 .style('fill','white')
 
 }
+
+function updateChart(selection) {
+	d3.json("../static/data/dummy_data.json").then(d => {
+		console.log(selection)
+		console.log(d3.keys(d.hunger[0]))
+		hunger_data = d.hunger[0]
+		console.log(hunger_data)
+		console.log(hunger_data.filter(d3.keys(hunger_data) === selection))
+		//container.selectAll("use")
+		//	.data(d.selection)
+	})
+
+}
+
+function optionChanged(dropSel){
+	updateChart(dropSel)
+}
+
 drawGraph()
