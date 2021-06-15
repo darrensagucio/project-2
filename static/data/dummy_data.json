@@ -1,4 +1,6 @@
-{
-    "states":["California","Texas","Florida","Maine"],
-    "hunger":[{"California":90, "Texas":80, "Florida":70, "Maine":60}]
+{   "states":["California","Texas","Depression","Florida"],
+    "metadata":[{"state":"California", "hunger":90},
+            {"state":"Texas", "hunger":50},
+            {"state":"Depression", "hunger":10},
+            {"state":"Florida", "hunger":70}]
 }
