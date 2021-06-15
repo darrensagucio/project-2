@@ -1,5 +1,5 @@
-var width = "700px"
-var height = "700px"
+var width = "400px"
+var height = "400px"
 var svgBackgroundColor = '#264653';
 
 var svg = d3.select('.graph')
@@ -9,7 +9,7 @@ var svg = d3.select('.graph')
 	.style('background-color', svgBackgroundColor);
 
 var container = svg.append("g")
-	.attr("transform", "translate(120,10)");
+	.attr("transform", "translate(80,10)");
 
 var numRows = 10;
 var numCols = 10;
@@ -39,7 +39,7 @@ var twitterFillActive = "#adf7b6";
 
 var drawGraph = function(){
 
-	var dropMenu = d3.select("#selDataset")
+	var dropMenu = d3.select("#dropdownDiv")
 
     d3.json("http://127.0.0.1:5000/dummydata").then((data) => {
         console.log(data)
@@ -111,7 +111,7 @@ function updateMetadata(selection) {
         var metadata = data.metadata
 		var filtered_data = metadata.filter(obj => obj.state === selection)
 		console.log(filtered_data[0].hunger)
-		var percentNumber = filtered_data[0].hunger
+		percentNumber = filtered_data[0].hunger
 	})
 }
 
