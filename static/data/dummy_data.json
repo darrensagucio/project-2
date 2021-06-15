@@ -6,6 +6,7 @@
     "North Carolina", "North Dakota", "Ohio", "Oklahoma", "Oregon", "Pennsylvania",
     "Rhode Island", "South Carolina", "South Dakota", "Tennessee", "Texas", "Utah", "Vermont",
     "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming"],
+    "years":[2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019],
     "metadata":[{"state":"Alabama", "hunger":0.161},
             {"state":"Alaska", "hunger":0.119},
             {"state":"Arizona", "hunger":0.126},

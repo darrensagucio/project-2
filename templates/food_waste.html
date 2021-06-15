@@ -42,9 +42,9 @@
 		<!-- navigation bar -->
 		<div class='topnav'>
 			<a class="active" href="index.html">Home</a>
-			<a href="../templates/food_insecurity.html">Food Insecurity</a>
+			<a href="">Food Insecurity</a>
 			<a href="">Food Waste</a>
-			<a href="https://www.feedingamerica.org/" target="_blank">How You Can Help</a>
+			<a href="">How You Can Help</a>
 		</div>
 
 		<div class="jumbotron text-center">
@@ -58,7 +58,7 @@
 			  </div>
 			  <div class = "col-lg-2">
 					<div class = "container">
-						<a href = "food_insecurity.html">
+						<a href = "index.html">
 						<img src="https://www.unitedway.org/i/blog/10.15.19_5_Surprising_Facts_about_Hunger_in_America_Blog-reupload.jpg/@zx_1000@zy_500" alt="" class="img-thumbnail"></p>
 						<div class="overlay">
 							<div class="text">Food Insecurity</div>
@@ -66,45 +66,37 @@
 					</div></a>
 					<div class = "container">
 						<a href = "index.html">
-						<img src="https://cdni0.trtworld.com/w960/h540/q75/79293_Reutersfoodwastefilephoto_1589992982138.jpeg" alt="" class="img-thumbnail"></p>
+						<img src="https://inteng-storage.s3.amazonaws.com/img/iea/9lwjA5dY6E/sizes/sustainable-agriculture_md.jpg" alt="" class="img-thumbnail"></p>
 						<div class="overlay">
 							<div class="text">Food Waste</div>
 						</div>
 					</div></a>
 					<div class = "container">
-						<a href = "https://www.feedingamerica.org/" target="_blank">
+						<a href = "index.html">
 						<img src="https://d2908q01vomqb2.cloudfront.net/9e6a55b6b4563e652a23be9d623ca5055c356940/2020/05/26/Food-insecurity.png" alt="" class="img-thumbnail"></p>
 						<div class="overlay">
 							<div class="text">How You Can Help</div>
 						</div>
 					</div></a>
-					<select id="selDataset" onchange= "optionChanged(this.value)"></select>		  
-			      </div>
+			  </div>
+			  <!-- <select id="selDataset" onchange= "optionChanged(this.value)"></select>
 			<div class = "graph">
-			</div>
+			</div> -->
 			  
 			  <div class="col-lg-8">
 				<center><h3>Our Story</h3>
 				<p>Our project is to visualize the juxtaposition between the amount of food waste that occurs and the widespread hunger (measured by food insecurity) throughout America. The story we want to convey is the high level of disconnect between the amount of food wasted and the amount of food needed to provide for the food insecure.</p>
-				<br>
-			
-				<h3>The Team</h3>
-
-				<a href ="https://github.com/darrensagucio" target="_blank"><img src="https://ca.slack-edge.com/T01KR1BQWKX-U01LDGCM542-470451f04c6e-512" alt="Avatar" height="100px"></a>
-				<a href ="https://github.com/claytonnagle" target="_blank"><img src="https://ca.slack-edge.com/T01KR1BQWKX-U01LPQEK6CV-6cde12d2b821-512" alt="Avatar" height="100px"></a>
-				<a href ="https://github.com/abigailmcarreon" target="_blank"><img src="https://ca.slack-edge.com/T01KR1BQWKX-U01L43KDRE0-b0eaf0671da9-512" alt="Avatar"height="100px"></a>
-				<a href ="https://github.com/admngz" target="_blank"><img src="https://ca.slack-edge.com/T01KR1BQWKX-U01KSFREENS-f53e6ca81465-512" alt="Avatar" height="100px"></a>
 				<!-- LEAFLET-->
-				<!-- <div id="map" style="width: 800px; height: 400px">
+				<div id="map" style="width: 800px; height: 400px">
 					<script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"
 					integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
 					crossorigin=""></script>
 				   
-					API key
+					<!-- API key -->
 					<script type=text/javascript src="{{url_for('static', filename='js/config.js')}}"></script>
-					 JS  
-					<script type=text/javascript src="{{url_for('static', filename='js/map.js')}}"></script>-->
-				  </div> 
+					<!-- JS  -->
+					<script type=text/javascript src="{{url_for('static', filename='js/map.js')}}"></script>
+				  </div>
 				</center>	
 				</div>
 			</div>
