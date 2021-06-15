@@ -13,6 +13,15 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
+@app.route("/dummydata")
+def dummydata(): 
+    
+    SITE_ROOT = os.path.realpath(os.path.dirname(__file__))
+    json_url = os.path.join(SITE_ROOT, "static/data", "dummy_data.json")
+    dummydata = json.load(open(json_url))
+    
+    return dummydata
+
 @app.route("/mapdata")
 def mapdata(): 
     

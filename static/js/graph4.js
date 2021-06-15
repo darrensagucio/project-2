@@ -1,5 +1,3 @@
-
-
 var width = "700px"
 var height = "700px"
 var svgBackgroundColor = '#264653';
@@ -43,7 +41,7 @@ var drawGraph = function(){
 
 	var dropMenu = d3.select("#selDataset")
 
-    d3.json("../static/data/dummy_data.json").then((data) => {
+    d3.json("http://127.0.0.1:5000/dummydata").then((data) => {
         console.log(data)
 		
 		var metadata = data.metadata
@@ -67,7 +65,7 @@ var drawGraph = function(){
 }
 
 function updateChart(selection) {
-	d3.json("../static/data/dummy_data.json").then(d => {
+	d3.json("http://127.0.0.1:5000/dummydata").then(d => {
 
 
 		//x and y axis scales
@@ -109,7 +107,7 @@ function updateChart(selection) {
 }
 
 function updateMetadata(selection) {
-	d3.json("../static/data/dummy_data.json").then((data) => {
+	d3.json("http://127.0.0.1:5000/dummydata").then((data) => {
         var metadata = data.metadata
 		var filtered_data = metadata.filter(obj => obj.state === selection)
 		console.log(filtered_data[0].hunger)
