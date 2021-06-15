@@ -13,6 +13,14 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
+@app.route("/foodwaste")
+def foodwaste():
+    return render_template("food_waste.html")
+
+@app.route("/foodinsecurity")
+def foodinsecurity():
+    return render_template("food_insecurity.html")
+
 @app.route("/dummydata")
 def dummydata(): 
     
