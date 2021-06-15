@@ -94,9 +94,7 @@ legend.addTo(myMap);
 
 d3.json("http://127.0.0.1:5000/mapdata").then(function(mapData) {
   var data = mapData;
-  console.log("hi");
   console.log(data);
-  console.log(parseInt(data.features[0].properties.STATE))
   geojson = L.geoJson(data, {
     // Passing in our style object
     style: style,
