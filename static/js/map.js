@@ -121,13 +121,13 @@ console.log("is this working??");
 console.log(API_KEY);
 
 function getColor(d){
-    return d > 20.0 ? '#FF4F33' :
-            d > 14.0 ? '#BA55D3' :
-            d > 12.0 ? '#F9FF33' : 
-            d > 10.0 ? '#FFC0CB' : 
-            d > 8.0 ? '#4FFF33' :
-            d > 4.0 ? '#3380FF' :
-                      '#000000';
+    return d > 20.0 ? '#000000' :
+            d > 14.0 ? '#404040' :
+            d > 12.0 ? '#696969' : 
+            d > 10.0 ? '#888888' : 
+            d > 8.0 ? '#A9A9A9' :
+            d > 4.0 ? '#C0C0C0' :
+                      '#E8E8E8';
                       
 }
 
@@ -233,6 +233,17 @@ legend.onAdd = function () {
 };
 
 legend.addTo(myMap);
+
+var dropdownLegend = L.control({position: 'bottomleft', title: "hi"});
+
+dropdownLegend.onAdd = function () {
+    var div = L.DomUtil.create('div', 'year legend');
+    div.innerHTML = '<select id= "year-selected"><option id="2019">2019</option><option id="2018">2018</option><option>2017</option><option>2016</option><option>2015</option><option>2014</option><option>2013</option><option>2012</option><option>2011</option><option>2010</option><option>2009</option></select>';
+    div.firstChild.onmousedown = div.firstChild.ondblclick = L.DomEvent.stopPropagation;
+    return div;
+};
+
+dropdownLegend.addTo(myMap);
 
 function init () {
     d3.json("http://127.0.0.1:5000/realdata").then(function(mapData) {

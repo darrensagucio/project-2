@@ -44,7 +44,7 @@ def mapdata():
 def realdata(): 
 
     # Read CSV
-    df = pd.read_csv('static/data/MASTER.csv')
+    df = pd.read_csv('static/data/MASTERCombinedMMG2009-2019Data.csv')
 
     # Year
     only2019 = df.loc[df['Year'] == 2019]
