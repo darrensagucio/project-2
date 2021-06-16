@@ -39,7 +39,7 @@ var twitterFillActive = "#adf7b6";
 
 var drawGraph = function(){
 
-	var dropMenu = d3.select("#dropdownDiv")
+	var dropMenu = d3.select("#selDataset")
 
     d3.json("http://127.0.0.1:5000/dummydata").then((data) => {
         console.log(data)
