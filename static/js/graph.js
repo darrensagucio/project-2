@@ -1,8 +1,9 @@
 // git file for interactive d3 graph
 
-var drawgraph = function(){
+var drawgraph = function() {
     
     var svg = d3.select('.graph').append('svg')
+
 
     var w = "500"
     var h = "500"
