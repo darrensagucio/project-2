@@ -64,6 +64,7 @@ h2 {
 
   .footer{
       font-family: Georgia, 'Times New Roman', Times, serif;
+      color:#333;
       text-align: center;
       opacity: 0.5;
   }
@@ -199,4 +200,9 @@ a.hover {
 
 img {
   border-radius: 50%;
+}
+
+.graph{
+  height: 600px;
+  width: 500px;
 }
